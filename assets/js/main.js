@@ -196,12 +196,14 @@ function updateGreeting() {
     var hours = now.getHours();
     var greeting;
 
-    if (hours < 12) {
+    if (hours >= 5 && hours < 12) {
         greeting = "Good Morning 🌅";
-    } else if (hours < 18) {
+    } else if (hours >= 12 && hours < 18) {
         greeting = "Good Afternoon 🌄";
-    } else {
+    } else if (hours >= 18 || hours < 1) {
         greeting = "Good Evening 🌃";
+    } else {
+        greeting = "Hi, Night Owl 🦉";
     }
 
     var greetingElement = document.getElementById("greeting");
