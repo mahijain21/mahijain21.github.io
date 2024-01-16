@@ -1263,3 +1263,15 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.greeting-light {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 50px;
+}
+
+.greeting-dark {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 50px;
+}
