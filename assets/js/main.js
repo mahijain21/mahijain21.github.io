@@ -190,3 +190,23 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+function updateGreeting() {
+    var now = new Date();
+    var hours = now.getHours();
+    var greeting;
+
+    if (hours < 12) {
+        greeting = "Good Morning 🌤️";
+    } else if (hours < 18) {
+        greeting = "Good Afternoon 🌄";
+    } else {
+        greeting = "Good Evening 🌙";
+    }
+
+    document.getElementById("greeting").innerText = greeting;
+}
+
+updateGreeting();
+// Optional: Update the greeting every hour
+setInterval(updateGreeting, 3600000);
