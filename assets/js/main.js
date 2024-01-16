@@ -197,16 +197,32 @@ function updateGreeting() {
     var greeting;
 
     if (hours < 12) {
-        greeting = "Good Morning 🌤️";
+        greeting = "Good Morning 🌅";
     } else if (hours < 18) {
         greeting = "Good Afternoon 🌄";
     } else {
-        greeting = "Good Evening 🌙";
+        greeting = "Good Evening 🌃";
     }
 
-    document.getElementById("greeting").innerText = greeting;
+    var greetingElement = document.getElementById("greeting");
+    greetingElement.innerText = greeting;
+
+    // Update greeting class based on the current theme
+    if (document.body.classList.contains('dark-theme')) {
+        greetingElement.className = 'greeting-dark';
+    } else {
+        greetingElement.className = 'greeting-light';
+    }
 }
 
+themeButton.addEventListener('click', () => {
+    // existing theme toggle code...
+    
+    // Update the greeting class when the theme is toggled
+    updateGreeting();
+});
+
+// Initial greeting update
 updateGreeting();
 // Optional: Update the greeting every hour
 setInterval(updateGreeting, 3600000);
