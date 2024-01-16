@@ -1172,7 +1172,7 @@ img{
             grid-template-columns: repeat(3, 1fr);
         }
         &__bg{
-            padding: 3rem 0 3.5rem;
+            padding: 1rem 0 1rem;
         }
         &__links{
             flex-direction: row;
@@ -1180,6 +1180,7 @@ img{
         }
         &__socials{
             justify-self: flex-end;
+            padding: 1rem 0 1rem;
         }
         &__copy{
             margin-top: 4.5rem;
